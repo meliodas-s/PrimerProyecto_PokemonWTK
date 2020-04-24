@@ -1,0 +1,220 @@
+body {
+  margin: 0;
+  background: #fcbf49;
+  font-family: 'Muli', sans-serif;
+}
+
+.header {
+  background-color: #fcbf49;
+  width: 100%; /*Para que valla de inico a fin*/
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__img {
+  width: 190px;
+  margin-top: 3px;
+  margin-left: 9px;
+}
+
+.header__menu {
+  align-items: center;
+  margin-right: 30px;
+}
+
+.header__menu ul {
+  display: none;
+  list-style: none;
+  padding: 0px;
+  position: absolute;  /*Para pocisionarlo mas adelante con respecto al padre*/
+  width: 100px;
+  text-align: right;
+  margin: 0px 0px 0px -14px;
+}
+
+.header__menu:hover ul, ul:hover {
+  display: block;
+}
+
+.header__menu li {
+  margin: 10px 0px;
+}
+
+.header__menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.header__menu li a:hover {
+  text-decoration: underline;
+}
+
+.header__menu--profile {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.header__menu--profile img {
+  margin-right: 8px;
+  height: 40px;
+  width: 40px;
+}
+
+.header__menu--profile p {
+  margin: 0px;
+  color: white;
+}
+
+/* BUSCADOR */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.main__tittle {
+  color: white;
+  font-size: 25px;
+  color: white;
+}
+
+.categories__title {
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  padding-left: 30px;
+  width: 100%;
+}
+
+/*-------------------------*/
+/* -- carousel de items -- */
+/*-------------------------*/
+
+.carousel {
+  width: 100%;
+  overflow: scroll; /*Propiedad para hacer scrol*/
+  padding: 30px;
+  position: relative; /*Todos los elementos de adentro, se pocisionan respecto a este*/
+ 
+}
+.carousel__container {
+  white-space: nowrap; /*Para que los elementos se vallan mas alla de la pantalla, y no se amontonen*/
+  margin: 50px 0px;
+  padding-bottom: 10px;
+}
+.carousel-item {
+  background-color: #f4a261;
+  width: 200px;
+  height: 250px;
+  border-radius: 17px;
+  overflow: hidden;
+  margin-right: 10px;
+  display: inline-block; /*Para que se vean en horizontal y no en vertical*/
+  cursor: pointer; /*Que se haga una manito el cursor*/
+  /*Hacer mas fluida la animacion, y que sea de izq a derech*/
+  transition: 450ms all;
+  transform-origin: center left;
+  position: relative;
+
+}
+.carousel-item:hover ~ .carousel-item {
+  transform: translate3d(100px, 0, 0);
+}
+.carousel__container:hover .carousel-item {
+  opacity: 0.3;
+}
+.carousel__container:hover .carousel-item:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+/* estilizar imagen dentro del .carousel */
+.carousel-item__img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover; /*Para que cubra todo el espacio*/
+}
+.carousel-item__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(to top, rgb(255, 255, 255, 0.3) 0% ,  rgba(255, 255, 255, 0) 100%);
+  font-size: 10px;
+  opacity: 0;
+  transition: 450ms opacity;
+  padding: 10px;
+  position: absolute;
+  top:0px;
+  left:0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.carousel-item__details p {
+  margin: 2px 0px;
+}
+
+.carousel-item:hover .carousel-item__details {
+  opacity: 1;
+}
+
+.carousel-item__details--icons img {
+  height: 25px;
+  width: 25px;
+}
+
+/* --------------------------------------- */
+/* -- estilo de imput nombre entrenador -- */
+/* --------------------------------------- */
+
+.input {
+  /* sacar linea azul cuando hago click */
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid white;
+  /* redondear brode */
+  border-radius: 15px;
+  font-family: 'Muli', sans-serif;
+  font-size: 16px;
+  height: 35px;
+  /* quitar el coso de arriba, y alejar un toq al texto de dentro pal costao */
+  padding: 0px 20px;
+  /* altura relativa segun la paguina */
+  width: 70%;
+}
+
+/* --------------------------------------- */
+/* --               FOOTER              -- */
+/* --------------------------------------- */
+
+.footer {
+
+  background-color: #e76f51;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+
+}
+.footer a{
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  padding-left: 30px;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+::placeholder {
+  color: white;
+}
+
+::-webkit-scrollbar {display: none;}
