@@ -3,26 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200&display=swap" rel="stylesheet">
   <title>Document</title>
 </head>
 <style>
   body {
     margin: 0;
+    background-color: #fcbf49;
+    font-family: 'Muli', sans-serif;
   }
-  header {
+  .header {
     background-color: #fcbf49;
     width: 100%; /*Para que valla de inico a fin*/
     height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  header img {
+  .header__img {
     width: 190px;
     margin-top: 3px;
     margin-left: 9px;
   }
+  .header__menu {
+    align-items: center;
+    margin-right: 30px;
+  }
+  .header__menu ul {
+    display: none;
+    list-style: none;
+    padding: 0px;
+    position: absolute;  /*Para pocisionarlo mas adelante con respecto al padre*/
+    width: 100px;
+    text-align: right;
+    margin: 0px 0px 0px -14px;
+  }
+  .header__menu:hover ul, ul:hover {
+    display: block;
+  }
+  .header__menu li {
+    margin: 10px 0px;
+  }
+  .header__menu li a {
+    color: white;
+    text-decoration: none;
+  }
+  .header__menu li a:hover {
+    text-decoration: underline;
+  }
+  .header__menu--profile {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+  }
+  .header__menu--profile img {
+    margin-right: 8px;
+    height: 40px;
+    width: 40px;
+  }
+  .header__menu--profile p {
+    margin: 0px;
+    color: white;
+  }
 </style>
 <body>
-  <header>
-    <img src="images/header-logo.png" alt="">
+  <header class="header">
+    <img class="header__img" src="images/header-logo.png" alt="">
+    <div class="header__menu">
+      <div class="header__menu--profile">
+        <img src="images/pikachu.png" alt="User">
+        <p>Perfil</p>
+      </div>
+      <ul>
+        <li><a href="/">Cuenta</a></li>
+        <li><a href="/">Nuevo Juego</a></li>
+      </ul>
+    </div>
   </header>
 </body>
 </html>
