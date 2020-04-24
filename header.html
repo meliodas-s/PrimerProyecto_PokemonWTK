@@ -65,6 +65,30 @@
     margin: 0px;
     color: white;
   }
+
+  .main {
+    height: 300px;
+  }
+  .main__tittle {
+    color: white;
+    font-size: 25px;
+    color: white;
+  }
+  .input {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid white;
+    border-radius: 7px;
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
+    height: 25px;
+    padding: 0px 20px;
+    width: 70%;
+  }
+  ::placeholder {
+    color: white;
+  }
+
 </style>
 <body>
   <header class="header">
@@ -81,9 +105,9 @@
     </div>
   </header>
 
-  <section>
-    
-
+  <section class="main">
+    <h2 class="main__tittle">Ingresa tu nombre:</h2>
+    <input class="input" type="text" placeholder="Entrenador...">
   </section>
 </body>
 </html>
